@@ -1,0 +1,128 @@
+[
+  {
+    "ingredient": "Pineapple",
+    "hex_code": "#FFD700",
+    "description": "สีเหลืองทอง",
+    "emoji": "🍍"
+  },
+  {
+    "ingredient": "Strawberry",
+    "hex_code": "#FF6347",
+    "description": "สีแดงสด",
+    "emoji": "🍓"
+  },
+  {
+    "ingredient": "Kiwi",
+    "hex_code": "#8FBC8F",
+    "description": "สีเขียวอ่อน",
+    "emoji": "🥝"
+  },
+  {
+    "ingredient": "Blueberry",
+    "hex_code": "#4B0082",
+    "description": "สีม่วงเข้ม",
+    "emoji": "🫐"
+  },
+  {
+    "ingredient": "Beetroot",
+    "hex_code": "#A52A2A",
+    "description": "สีน้ำตาลแดง",
+    "emoji": "🥬"
+  },
+  {
+    "ingredient": "Coconut",
+    "hex_code": "#FFF8DC",
+    "description": "สีขาวครีม",
+    "emoji": "🥥"
+  },
+  {
+    "ingredient": "Mango",
+    "hex_code": "#FFC324",
+    "description": "สีเหลืองส้ม",
+    "emoji": "🥭"
+  },
+  {
+    "ingredient": "Passion fruit",
+    "hex_code": "#DDA0DD",
+    "description": "สีม่วงอ่อน",
+    "emoji": "🍇"
+  },
+  {
+    "ingredient": "Honey",
+    "hex_code": "#FFD700",
+    "description": "สีเหลืองทอง",
+    "emoji": "🍯"
+  },
+  {
+    "ingredient": "Lemon",
+    "hex_code": "#FFFACD",
+    "description": "สีเหลืองอ่อน",
+    "emoji": "🍋"
+  },
+  {
+    "ingredient": "Avocado",
+    "hex_code": "#6B8E23",
+    "description": "สีเขียวเข้ม",
+    "emoji": "🥑"
+  },
+  {
+    "ingredient": "Peach",
+    "hex_code": "#FFE5B4",
+    "description": "สีพีชอ่อน",
+    "emoji": "🍑"
+  },
+  {
+    "ingredient": "Banana",
+    "hex_code": "#FFE135",
+    "description": "สีเหลืองสด",
+    "emoji": "🍌"
+  },
+  {
+    "ingredient": "Apple",
+    "hex_code": "#FF4500",
+    "description": "สีแดงส้ม",
+    "emoji": "🍎"
+  },
+  {
+    "ingredient": "Dragon fruit",
+    "hex_code": "#FF69B4",
+    "description": "สีชมพูสด",
+    "emoji": "🐉"
+  },
+  {
+    "ingredient": "Mint",
+    "hex_code": "#98FF98",
+    "description": "สีเขียวมิ้นต์",
+    "emoji": "🌱"
+  },
+  {
+    "ingredient": "Matcha",
+    "hex_code": "#556B2F",
+    "description": "สีเขียวชาเขียว",
+    "emoji": "🍵"
+  },
+  {
+    "ingredient": "Basil",
+    "hex_code": "#228B22",
+    "description": "สีเขียวสด",
+    "emoji": "🌿"
+  },
+  {
+    "ingredient": "Cereal",
+    "hex_code": "#FFF8DC",
+    "description": "สีขาวครีม",
+    "emoji": "🥣"
+  },
+  {
+    "ingredient": "Yogurt",
+    "hex_code": "#FDF5E6",
+    "description": "สีครีมนวล",
+    "emoji": "🥛"
+  },
+  {
+    "ingredient": "Cinnamon",
+    "hex_code": "#D2691E",
+    "description": "สีน้ำตาลเข้ม",
+    "emoji": "🌰"
+  }
+]

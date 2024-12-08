@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "SUMMER SENSATION",
+    "price": 95,
+    "ingredients": ["pineapple", "strawberry"],
+    "recommended": false
+  },
+  {
+    "id": 2,
+    "name": "GREEN APPLE KIWI",
+    "price": 115,
+    "ingredients": ["green apple", "kiwi"],
+    "recommended": true
+  },
+  {
+    "id": 3,
+    "name": "MIXED BERRY YOGURT",
+    "price": 125,
+    "ingredients": ["strawberry", "blueberry", "yogurt"],
+    "recommended": false
+  },
+  {
+    "id": 4,
+    "name": "STRAWBERRY HAWAII",
+    "price": 155,
+    "ingredients": ["strawberry", "pineapple"],
+    "recommended": false
+  },
+  {
+    "id": 5,
+    "name": "STRAWBERRY BEET SHERBET",
+    "price": 145,
+    "ingredients": ["strawberry", "beetroot"],
+    "recommended": false
+  },
+  {
+    "id": 6,
+    "name": "BLUEBERRY AVOCADO",
+    "price": 145,
+    "ingredients": ["blueberry", "avocado"],
+    "recommended": false
+  },
+  {
+    "id": 7,
+    "name": "GOCO SMOOTHIES",
+    "price": 155,
+    "ingredients": ["coconut", "mango"],
+    "recommended": true
+  },
+  {
+    "id": 8,
+    "name": "PINEAPPLE BASIL BEET",
+    "price": 125,
+    "ingredients": ["pineapple", "basil", "beetroot"],
+    "recommended": false
+  },
+  {
+    "id": 9,
+    "name": "MANGO PASSION",
+    "price": 135,
+    "ingredients": ["mango", "passion fruit"],
+    "recommended": false
+  },
+  {
+    "id": 10,
+    "name": "HONEY LEMON YOGURT",
+    "price": 115,
+    "ingredients": ["honey", "lemon", "yogurt"],
+    "recommended": false
+  },
+  {
+    "id": 11,
+    "name": "AVOCADO STRAWBERRY",
+    "price": 145,
+    "ingredients": ["avocado", "strawberry"],
+    "recommended": false
+  },
+  {
+    "id": 12,
+    "name": "P&P PEACH PINE",
+    "price": 135,
+    "ingredients": ["peach", "pineapple"],
+    "recommended": false
+  },
+  {
+    "id": 13,
+    "name": "CINNAMON BUN",
+    "price": 125,
+    "ingredients": ["cinnamon", "banana"],
+    "recommended": false
+  },
+  {
+    "id": 14,
+    "name": "PASSION HONEY",
+    "price": 105,
+    "ingredients": ["passion fruit", "honey"],
+    "recommended": true
+  },
+  {
+    "id": 15,
+    "name": "AVOCADO MANGO SMOOTHIES",
+    "price": 135,
+    "ingredients": ["avocado", "mango"],
+    "recommended": false
+  },
+  {
+    "id": 16,
+    "name": "MATCHA AVOCADO",
+    "price": 165,
+    "ingredients": ["matcha", "avocado"],
+    "recommended": true
+  },
+  {
+    "id": 17,
+    "name": "CEREAL SMOOTHIE",
+    "price": 95,
+    "ingredients": ["banana", "cereal"],
+    "recommended": false
+  },
+  {
+    "id": 18,
+    "name": "APPLE DRAGON",
+    "price": 125,
+    "ingredients": ["apple", "dragon fruit"],
+    "recommended": false
+  },
+  {
+    "id": 19,
+    "name": "PINEAPPLE MINT",
+    "price": 115,
+    "ingredients": ["pineapple", "mint"],
+    "recommended": false
+  },
+  {
+    "id": 20,
+    "name": "COCONUT MATCHA",
+    "price": 165,
+    "ingredients": ["coconut", "matcha"],
+    "recommended": false
+  }
+]
