@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import menu from './data/menu.json';
+import MenuCard from './MenuCard';
 
 function App() {
   return (
@@ -9,14 +11,14 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
+            {menu.map(item => (
+              <MenuCard item={item} />
+            ))}
+          </div>
+        </div>
+
       </header>
     </div>
   );
