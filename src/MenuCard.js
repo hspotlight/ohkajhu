@@ -11,6 +11,43 @@ const MenuCard = ({ item }) => {
       }}
     >
       <CardContent>
+        {!item.display && (
+          <div style={{ 
+            position: 'relative',
+            width: '100%',
+            height: '100%'
+          }}>
+            <div style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              pointerEvents: 'none'
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                borderTop: '2px solid red',
+                transform: 'rotate(23deg)',
+                transformOrigin: '0 0'
+              }} />
+              <div style={{
+                position: 'absolute', 
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                borderTop: '2px solid red',
+                transform: 'rotate(-23deg)',
+                transformOrigin: '100% 0'
+              }} />
+            </div>
+          </div>
+        )}
         <Typography variant="h5" component="h3" gutterBottom color="primary">
           {item.name}
         </Typography>

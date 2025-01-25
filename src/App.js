@@ -116,7 +116,7 @@ function App() {
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
             <Grid container spacing={2}>
               {filteredMenu.map(item => (
-                <Grid item xs={12} sm={6} md={4}>
+                <Grid item xs={12} sm={6} md={6} lg={4}>
                   <MenuCard item={item} />
                 </Grid>
               ))}
