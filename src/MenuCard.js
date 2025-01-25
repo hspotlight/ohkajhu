@@ -1,32 +1,39 @@
 import React from 'react';
+import { Card, CardContent, Typography } from '@mui/material';
 
 const MenuCard = ({ item }) => {
   return (
-    <div 
-      style={{
-        width: '300px',
-        padding: '20px',
-        border: '1px solid #ddd',
-        borderRadius: '8px',
-        backgroundColor: 'white',
-        color: '#333',
-        boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+    <Card 
+      sx={{
+        minWidth: 300,
         margin: '10px',
         flex: '0 0 calc(50% - 40px)',
-        maxWidth: 'calc(50% - 40px)'
       }}
     >
-      <h3 style={{ margin: '0 0 10px 0', color: '#2c3e50' }}>{item.name}</h3>
-      <p style={{ fontSize: '1.2em', fontWeight: 'bold' }}>Price: {item.price} baht</p>
-      <p style={{ color: '#666' }}>Ingredients: {item.ingredients.join(', ')}</p>
-      {item.recommended && (
-        <p style={{ 
-          color: '#f39c12',
-          fontWeight: 'bold',
-          margin: '10px 0 0 0'
-        }}>⭐ Recommended</p>
-      )}
-    </div>
+      <CardContent>
+        <Typography variant="h5" component="h3" gutterBottom color="primary">
+          {item.name}
+        </Typography>
+        <Typography variant="h6" gutterBottom>
+          Price: {item.price} baht
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          Ingredients: {item.ingredients.join(', ')}
+        </Typography>
+        {item.recommended && (
+          <Typography 
+            variant="body1" 
+            sx={{ 
+              color: 'warning.main',
+              fontWeight: 'bold',
+              marginTop: 1
+            }}
+          >
+            ⭐ Recommended
+          </Typography>
+        )}
+      </CardContent>
+    </Card>
   );
 };
 
