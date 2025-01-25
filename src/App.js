@@ -131,7 +131,7 @@ function App() {
         </div>
       </Box>
       <Typography variant="body2" sx={{ color: '#8da735', marginTop: '20px' }}>
-        © 2025, Crafted with 💖 By HSpotlight
+        © 2025, Crafted with 💖 By <a href="https://www.facebook.com/HSpotlight/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>HSpotlight</a>
       </Typography>
     </div>
   );
