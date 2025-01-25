@@ -10,6 +10,35 @@ function App() {
   const [open, setOpen] = useState(false);
   const [filterType, setFilterType] = useState('include');
   const [selectedIngredients, setSelectedIngredients] = useState([]);
+  const [filteredMenu, setFilteredMenu] = useState(menu.map(item => ({...item, display: true})));
+
+  const handleCloseFilterDialog = () => {
+    const filtered = menu.map(item => {
+      const menuIngredients = item.ingredients || [];
+      
+      if(selectedIngredients.length === 0) {
+        item.display = true;
+        return item;
+      }
+      
+      if (filterType === 'include') {
+        // Display items that contain ALL selected ingredients
+        item.display = selectedIngredients.some(ingredient => 
+          menuIngredients.includes(ingredient.toLowerCase())
+        );
+      } else {
+        // Display items that contain NONE of selected ingredients
+        item.display = !selectedIngredients.some(ingredient =>
+          menuIngredients.includes(ingredient.toLowerCase())
+        );
+      }
+      return item;
+    });
+
+    setFilteredMenu(filtered);
+    setOpen(false);
+  };
+
 
   return (
     <div className="App">
@@ -77,7 +106,7 @@ function App() {
               }}>
                 Reset
               </Button>
-              <Button onClick={() => setOpen(false)} variant="contained">
+              <Button onClick={handleCloseFilterDialog} variant="contained">
                 Apply Filter
               </Button>
             </DialogActions>
@@ -86,7 +115,7 @@ function App() {
         <div>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
             <Grid container spacing={2}>
-              {menu.map(item => (
+              {filteredMenu.map(item => (
                 <Grid item xs={12} sm={6} md={4}>
                   <MenuCard item={item} />
                 </Grid>
