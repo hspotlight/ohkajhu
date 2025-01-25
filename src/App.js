@@ -7,8 +7,8 @@ import { Box, Grid } from '@mui/material';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Box sx={{background: 'white', borderRadius: '300px', height: '150px', width: '150px', display: 'flex'}}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+        <Box sx={{ background: 'white', borderRadius: '300px', height: '150px', width: '150px', display: 'flex' }}>
           <img width={150} height={150} src={logo} alt="logo" />
         </Box>
         <div>
@@ -22,8 +22,7 @@ function App() {
             </Grid>
           </div>
         </div>
-
-      </header>
+      </Box>
     </div>
   );
 }
