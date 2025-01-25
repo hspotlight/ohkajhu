@@ -118,6 +118,17 @@ function App() {
             </DialogActions>
           </Dialog>
         </Box>
+        {selectedIngredients.length > 0 && (
+          <Typography variant="body1" sx={{ marginY: 2, color: '#666' }}>
+            {filterType === 'include' ? 'Include: ' : 'Exclude: '}
+            {selectedIngredients.map((ingredient, index) => (
+              <span key={ingredient}>
+                {ingredients.find(ing => ing.ingredient === ingredient)?.emoji} {ingredient}
+                {index < selectedIngredients.length - 1 ? ', ' : ''}
+              </span>
+            ))}
+          </Typography>
+        )}
         <div>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
             <Grid container spacing={2}>
