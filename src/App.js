@@ -4,7 +4,7 @@ import './App.css';
 import menu from './data/menu.json';
 import ingredients from './data/ingredients.json';
 import MenuCard from './MenuCard';
-import { Box, Grid, InputLabel, Button, Dialog, DialogTitle, DialogContent, DialogActions, FormControl, RadioGroup, FormControlLabel, Radio, Select, MenuItem, ListItemText, Checkbox } from '@mui/material';
+import { Typography, Box, Grid, InputLabel, Button, Dialog, DialogTitle, DialogContent, DialogActions, FormControl, RadioGroup, FormControlLabel, Radio, Select, MenuItem, ListItemText, Checkbox } from '@mui/material';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -46,11 +46,17 @@ function App() {
         <Box sx={{ background: 'white', borderRadius: '300px', height: '150px', width: '150px', display: 'flex' }}>
           <img width={150} height={150} src={logo} alt="logo" />
         </Box>
+        <Typography variant="h4" sx={{ fontWeight: 'bold', color: '#8da735', marginTop: '10px' }}>
+          Ohkajhu Smoothie
+        </Typography>
         <Box sx={{ margin: '20px 0' }}>
           <Button
             variant="contained"
             color="primary"
             onClick={() => setOpen(true)}
+            sx={{
+              backgroundColor: '#f17531',
+            }}
           >
             Filter by Ingredients
           </Button>
@@ -106,7 +112,7 @@ function App() {
               }}>
                 Reset
               </Button>
-              <Button onClick={handleCloseFilterDialog} variant="contained">
+              <Button onClick={handleCloseFilterDialog} variant="contained" sx={{backgroundColor: '#f17531'}}>
                 Apply Filter
               </Button>
             </DialogActions>

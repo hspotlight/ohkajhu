@@ -48,7 +48,9 @@ const MenuCard = ({ item }) => {
             </div>
           </div>
         )}
-        <Typography variant="h5" component="h3" gutterBottom color="primary">
+        <Typography variant="h5" component="h3" gutterBottom color="primary" sx={{
+            color: '#8da735'
+        }}>
           {item.name}
         </Typography>
         <Typography variant="h6" gutterBottom>
@@ -61,7 +63,7 @@ const MenuCard = ({ item }) => {
           <Typography 
             variant="body1" 
             sx={{ 
-              color: 'warning.main',
+              color: '#f17531',
               fontWeight: 'bold',
               marginTop: 1
             }}
