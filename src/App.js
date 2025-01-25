@@ -1,17 +1,16 @@
-import logo from './logo.svg';
+import logo from './ohkajhu_logo-removed-bg.png';
 import './App.css';
 import menu from './data/menu.json';
 import MenuCard from './MenuCard';
-import { Grid } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Box sx={{background: 'white', borderRadius: '300px', height: '150px', width: '150px', display: 'flex'}}>
+          <img width={150} height={150} src={logo} alt="logo" />
+        </Box>
         <div>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
             <Grid container spacing={2}>
