@@ -10,20 +10,20 @@ function App() {
   const [open, setOpen] = useState(false);
   const [filterType, setFilterType] = useState('include');
   const [selectedIngredients, setSelectedIngredients] = useState([]);
-  const [filteredMenu, setFilteredMenu] = useState(menu.map(item => ({...item, display: true})));
+  const [filteredMenu, setFilteredMenu] = useState(menu.map(item => ({ ...item, display: true })));
 
   const handleCloseFilterDialog = () => {
     const filtered = menu.map(item => {
       const menuIngredients = item.ingredients || [];
-      
-      if(selectedIngredients.length === 0) {
+
+      if (selectedIngredients.length === 0) {
         item.display = true;
         return item;
       }
-      
+
       if (filterType === 'include') {
         // Display items that contain ALL selected ingredients
-        item.display = selectedIngredients.some(ingredient => 
+        item.display = selectedIngredients.some(ingredient =>
           menuIngredients.includes(ingredient.toLowerCase())
         );
       } else {
@@ -78,12 +78,20 @@ function App() {
                   onChange={(e) => setFilterType(e.target.value)}
                 >
                   <FormControlLabel value="include" control={<Radio />} label="Include ingredients" />
+                  <Typography variant="body1" sx={{ color: 'black' }}>
+                    note: (select all menu that contain at least one of the selected ingredients)
+                  </Typography>
+
                   <FormControlLabel value="exclude" control={<Radio />} label="Exclude ingredients" />
+                  <Typography variant="body1" sx={{ color: 'black' }}>
+                    note: (select all menu that do not contain any of the selected ingredients)
+                  </Typography>
                 </RadioGroup>
               </FormControl>
               <FormControl sx={{ width: '100%', mt: 2 }}>
-                <InputLabel>Select Ingredients</InputLabel>
+                <InputLabel label="select-ingredients">Select Ingredients</InputLabel>
                 <Select
+                  label="select-ingredients"
                   multiple
                   value={selectedIngredients}
                   onChange={(e) => setSelectedIngredients(e.target.value)}
@@ -93,7 +101,7 @@ function App() {
                     return (
                       <MenuItem key={ingredient.ingredient} value={ingredient.ingredient}>
                         <Checkbox checked={selectedIngredients.indexOf(ingredient.ingredient) > -1} />
-                        <ListItemText 
+                        <ListItemText
                           primary={
                             <>
                               {ingredient?.emoji} {ingredient.ingredient}
@@ -113,7 +121,7 @@ function App() {
               }}>
                 Reset
               </Button>
-              <Button onClick={handleCloseFilterDialog} variant="contained" sx={{backgroundColor: 'text.secondary', color: 'white'}}>
+              <Button onClick={handleCloseFilterDialog} variant="contained" sx={{ backgroundColor: 'text.secondary', color: 'white' }}>
                 Apply Filter
               </Button>
             </DialogActions>
