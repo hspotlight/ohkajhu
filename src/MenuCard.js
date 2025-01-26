@@ -3,7 +3,7 @@ import { Card, CardContent, Typography } from '@mui/material';
 
 const MenuCard = ({ item }) => {
   return (
-    <Card 
+    <Card
       sx={{
         minWidth: 300,
         margin: '10px',
@@ -12,7 +12,7 @@ const MenuCard = ({ item }) => {
     >
       <CardContent>
         {!item.display && (
-          <div style={{ 
+          <div style={{
             position: 'relative',
             width: '100%',
             height: '100%'
@@ -36,7 +36,7 @@ const MenuCard = ({ item }) => {
                 transformOrigin: '0 0'
               }} />
               <div style={{
-                position: 'absolute', 
+                position: 'absolute',
                 top: 0,
                 left: 0,
                 right: 0,
@@ -49,28 +49,20 @@ const MenuCard = ({ item }) => {
           </div>
         )}
         <Typography variant="h5" component="h3" gutterBottom color="primary" sx={{
-            color: 'primary'
+          color: 'primary'
         }}>
-          {item.name}
+          {item.name}{item.recommended && (
+            <span>
+              &nbsp;⭐
+            </span>
+          )}
         </Typography>
         <Typography variant="h6" gutterBottom>
           Price: {item.price} baht
         </Typography>
-        <Typography variant="body1" color="text.secondary">
+        <Typography variant="body1" color="black">
           Ingredients: {item.ingredients.join(', ')}
         </Typography>
-        {item.recommended && (
-          <Typography 
-            variant="body1" 
-            sx={{ 
-              color: '#f17531',
-              fontWeight: 'bold',
-              marginTop: 1
-            }}
-          >
-            ⭐ Recommended
-          </Typography>
-        )}
       </CardContent>
     </Card>
   );
