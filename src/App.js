@@ -22,12 +22,12 @@ function App() {
   const handleCloseFilterDialog = () => {
     const filtered = menu.map(item => {
       const menuIngredients = item.ingredients || [];
-
+      
       if (selectedIngredients.length === 0) {
         item.display = true;
         return item;
       }
-
+      
       if (filterType === 'include') {
         // Display items that contain ALL selected ingredients
         item.display = selectedIngredients.some(ingredient =>
@@ -42,6 +42,11 @@ function App() {
       return item;
     });
 
+    logEvent(analytics, 'filter_by_ingredients_dialog_closed');
+    logEvent(analytics, 'filter_by_ingredients', {
+      filter_type: filterType,
+      selected_ingredients: selectedIngredients.join('|'),
+    });
     setFilteredMenu(filtered);
     setOpen(false);
   };
@@ -60,7 +65,10 @@ function App() {
           <Button
             variant="contained"
             color="primary"
-            onClick={() => setOpen(true)}
+            onClick={() => {
+              setOpen(true)
+              logEvent(analytics, 'filter_by_ingredients_button_clicked');
+            }}
             sx={{
               backgroundColor: 'text.secondary',
               color: 'white'
@@ -103,7 +111,7 @@ function App() {
         </div>
       </Box>
       <Typography variant="body2" sx={{ color: 'primary', marginTop: '20px' }}>
-        © 2025, Crafted with 💖 By <a href="https://www.facebook.com/HSpotlight/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>HSpotlight</a>
+        © 2025, Crafted with 💖 By <a href="https://www.facebook.com/HSpotlight/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} onClick={() => logEvent(analytics, 'hspotlight_link_clicked')}>HSpotlight</a>
       </Typography>
     </div>
   );

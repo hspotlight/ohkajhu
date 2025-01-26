@@ -1,11 +1,16 @@
 import React from 'react';
 import { Dialog, Grid, DialogTitle, DialogContent, DialogActions, FormControl, RadioGroup, FormControlLabel, Radio, Typography, Button } from '@mui/material';
+import { logEvent } from 'firebase/analytics';
+import { analytics } from '../firebaseConfig';
 
 const SelectIngredientsDialog = ({ open, setOpen, filterType, setFilterType, selectedIngredients, setSelectedIngredients, ingredients, handleCloseFilterDialog }) => {
   return (
     <Dialog
       open={open}
-      onClose={() => setOpen(false)}
+      onClose={() => {
+        setOpen(false)
+        logEvent(analytics, 'filter_by_ingredients_dialog_closed');
+      }}
       aria-labelledby="filter-dialog-title"
       maxWidth="sm"
       fullWidth
@@ -72,6 +77,7 @@ const SelectIngredientsDialog = ({ open, setOpen, filterType, setFilterType, sel
         <Button onClick={() => {
           setSelectedIngredients([]);
           setOpen(false);
+          logEvent(analytics, 'filter_by_ingredients_dialog_reset');
         }}>
           Reset
         </Button>
