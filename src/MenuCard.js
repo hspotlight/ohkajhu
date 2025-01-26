@@ -1,6 +1,17 @@
 import React from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
 
+/**
+ * A card component that displays menu item information
+ * @component
+ * @param {Object} props - The component props
+ * @param {Object} props.item - The menu item object
+ * @param {string} props.item.name - The name of the menu item
+ * @param {boolean} props.item.display - Whether the item should be displayed normally or faded
+ * @param {string[]} [props.item.ingredients] - Optional array of ingredients in the menu item
+ * @returns {JSX.Element} A Material-UI Card component displaying the menu item
+ */
+
 const MenuCard = ({ item }) => {
   return (
     <Card
@@ -8,6 +19,7 @@ const MenuCard = ({ item }) => {
         minWidth: 300,
         margin: '10px',
         flex: '0 0 calc(50% - 40px)',
+        opacity: item.display ? 1 : 0.5,
       }}
     >
       <CardContent>
