@@ -46,7 +46,7 @@ function App() {
         <Box sx={{ background: 'white', borderRadius: '300px', height: '150px', width: '150px', display: 'flex' }}>
           <img width={150} height={150} src={logo} alt="logo" />
         </Box>
-        <Typography variant="h4" sx={{ fontWeight: 'bold', color: '#8da735', marginTop: '10px' }}>
+        <Typography variant="h4" sx={{ fontWeight: 'bold', color: 'primary', marginTop: '10px' }}>
           Ohkajhu Smoothie
         </Typography>
         <Box sx={{ margin: '20px 0' }}>
@@ -55,7 +55,8 @@ function App() {
             color="primary"
             onClick={() => setOpen(true)}
             sx={{
-              backgroundColor: '#f17531',
+              backgroundColor: 'text.secondary',
+              color: 'white'
             }}
           >
             Filter by Ingredients
@@ -112,7 +113,7 @@ function App() {
               }}>
                 Reset
               </Button>
-              <Button onClick={handleCloseFilterDialog} variant="contained" sx={{backgroundColor: '#f17531'}}>
+              <Button onClick={handleCloseFilterDialog} variant="contained" sx={{backgroundColor: 'text.secondary', color: 'white'}}>
                 Apply Filter
               </Button>
             </DialogActions>
@@ -141,7 +142,7 @@ function App() {
           </div>
         </div>
       </Box>
-      <Typography variant="body2" sx={{ color: '#8da735', marginTop: '20px' }}>
+      <Typography variant="body2" sx={{ color: 'primary', marginTop: '20px' }}>
         © 2025, Crafted with 💖 By <a href="https://www.facebook.com/HSpotlight/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>HSpotlight</a>
       </Typography>
     </div>

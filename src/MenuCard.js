@@ -49,7 +49,7 @@ const MenuCard = ({ item }) => {
           </div>
         )}
         <Typography variant="h5" component="h3" gutterBottom color="primary" sx={{
-            color: '#8da735'
+            color: 'primary'
         }}>
           {item.name}
         </Typography>
