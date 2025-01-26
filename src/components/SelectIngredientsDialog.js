@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dialog, DialogTitle, DialogContent, DialogActions, FormControl, RadioGroup, FormControlLabel, Radio, Typography, InputLabel, Select, MenuItem, Checkbox, ListItemText, Button } from '@mui/material';
+import { Dialog, Grid, DialogTitle, DialogContent, DialogActions, FormControl, RadioGroup, FormControlLabel, Radio, Typography, InputLabel, Select, MenuItem, Checkbox, ListItemText, Button } from '@mui/material';
 
 const SelectIngredientsDialog = ({ open, setOpen, filterType, setFilterType, selectedIngredients, setSelectedIngredients, ingredients, handleCloseFilterDialog }) => {
   return (
@@ -30,31 +30,43 @@ const SelectIngredientsDialog = ({ open, setOpen, filterType, setFilterType, sel
             </Typography>
           </RadioGroup>
         </FormControl>
-        <FormControl sx={{ width: '100%', mt: 2 }}>
-          <InputLabel label="select-ingredients">Select Ingredients</InputLabel>
-          <Select
-            label="select-ingredients"
-            multiple
-            value={selectedIngredients}
-            onChange={(e) => setSelectedIngredients(e.target.value)}
-            renderValue={(selected) => selected.join(', ')}
-          >
-            {ingredients.map((ingredient) => {
-              return (
-                <MenuItem key={ingredient.ingredient} value={ingredient.ingredient}>
-                  <Checkbox checked={selectedIngredients.indexOf(ingredient.ingredient) > -1} />
-                  <ListItemText
-                    primary={
-                      <>
-                        {ingredient?.emoji} {ingredient.ingredient}
-                      </>
+        <Grid container spacing={2} sx={{ mt: 2 }}>
+          {ingredients.map((ingredient) => {
+            const isSelected = selectedIngredients.includes(ingredient.ingredient);
+            return (
+              <Grid item xs={4} sm={3} key={ingredient.ingredient}>
+                <Button
+                  fullWidth
+                  variant={isSelected ? "contained" : "outlined"}
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: '80px',
+                    backgroundColor: isSelected ? 'primary.main' : 'transparent',
+                    color: isSelected ? 'white' : 'primary.main',
+                    '&:hover': {
+                      backgroundColor: isSelected ? 'primary.dark' : 'primary.light',
                     }
-                  />
-                </MenuItem>
-              );
-            })}
-          </Select>
-        </FormControl>
+                  }}
+                  onClick={() => {
+                    if (isSelected) {
+                      setSelectedIngredients(selectedIngredients.filter(i => i !== ingredient.ingredient));
+                    } else {
+                      setSelectedIngredients([...selectedIngredients, ingredient.ingredient]);
+                    }
+                  }}
+                >
+                  <Typography variant="h5" component="div">
+                    {ingredient.emoji}
+                  </Typography>
+                  <Typography variant="caption">
+                    {ingredient.ingredient}
+                  </Typography>
+                </Button>
+              </Grid>
+            );
+          })}
+        </Grid>
       </DialogContent>
       <DialogActions>
         <Button onClick={() => {
