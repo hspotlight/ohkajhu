@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import logo from './ohkajhu_logo-removed-bg.png';
 import './App.css';
 import menu from './data/menu.json';
@@ -6,12 +6,18 @@ import ingredients from './data/ingredients.json';
 import MenuCard from './MenuCard';
 import { Typography, Box, Grid, Button } from '@mui/material';
 import SelectIngredientsDialog from './components/SelectIngredientsDialog';
+import { analytics } from './firebaseConfig';
+import { logEvent } from 'firebase/analytics';
 
 function App() {
   const [open, setOpen] = useState(false);
   const [filterType, setFilterType] = useState('include');
   const [selectedIngredients, setSelectedIngredients] = useState([]);
   const [filteredMenu, setFilteredMenu] = useState(menu.map(item => ({ ...item, display: true })));
+
+  useEffect(() => {
+    logEvent(analytics, 'app_loaded');
+  }, []);
 
   const handleCloseFilterDialog = () => {
     const filtered = menu.map(item => {

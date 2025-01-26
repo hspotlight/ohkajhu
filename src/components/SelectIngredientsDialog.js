@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dialog, Grid, DialogTitle, DialogContent, DialogActions, FormControl, RadioGroup, FormControlLabel, Radio, Typography, InputLabel, Select, MenuItem, Checkbox, ListItemText, Button } from '@mui/material';
+import { Dialog, Grid, DialogTitle, DialogContent, DialogActions, FormControl, RadioGroup, FormControlLabel, Radio, Typography, Button } from '@mui/material';
 
 const SelectIngredientsDialog = ({ open, setOpen, filterType, setFilterType, selectedIngredients, setSelectedIngredients, ingredients, handleCloseFilterDialog }) => {
   return (
