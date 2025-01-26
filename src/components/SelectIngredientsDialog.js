@@ -75,13 +75,13 @@ const SelectIngredientsDialog = ({ open, setOpen, filterType, setFilterType, sel
       </DialogContent>
       <DialogActions>
         <Button onClick={() => {
-          setSelectedIngredients([]);
-          setOpen(false);
           logEvent(analytics, 'filter_by_ingredients_dialog_reset');
+          setSelectedIngredients([]);
+          handleCloseFilterDialog(true);
         }}>
           Reset
         </Button>
-        <Button onClick={handleCloseFilterDialog} variant="contained" sx={{ backgroundColor: 'text.secondary', color: 'white' }}>
+        <Button onClick={() => handleCloseFilterDialog(false)} variant="contained" sx={{ backgroundColor: 'text.secondary', color: 'white' }}>
           Apply Filter
         </Button>
       </DialogActions>

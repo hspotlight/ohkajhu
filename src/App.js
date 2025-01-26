@@ -19,11 +19,11 @@ function App() {
     logEvent(analytics, 'app_loaded');
   }, []);
 
-  const handleCloseFilterDialog = () => {
+  const handleCloseFilterDialog = (reset) => {
     const filtered = menu.map(item => {
       const menuIngredients = item.ingredients || [];
       
-      if (selectedIngredients.length === 0) {
+      if (reset || selectedIngredients.length === 0) {
         item.display = true;
         return item;
       }
