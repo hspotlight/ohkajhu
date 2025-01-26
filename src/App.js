@@ -4,7 +4,8 @@ import './App.css';
 import menu from './data/menu.json';
 import ingredients from './data/ingredients.json';
 import MenuCard from './MenuCard';
-import { Typography, Box, Grid, InputLabel, Button, Dialog, DialogTitle, DialogContent, DialogActions, FormControl, RadioGroup, FormControlLabel, Radio, Select, MenuItem, ListItemText, Checkbox } from '@mui/material';
+import { Typography, Box, Grid, Button } from '@mui/material';
+import SelectIngredientsDialog from './components/SelectIngredientsDialog';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -61,71 +62,16 @@ function App() {
           >
             Filter by Ingredients
           </Button>
-          <Dialog
+          <SelectIngredientsDialog
             open={open}
-            onClose={() => setOpen(false)}
-            aria-labelledby="filter-dialog-title"
-            maxWidth="sm"
-            fullWidth
-          >
-            <DialogTitle id="filter-dialog-title">
-              Filter Menu by Ingredients
-            </DialogTitle>
-            <DialogContent>
-              <FormControl component="fieldset" sx={{ width: '100%' }}>
-                <RadioGroup
-                  value={filterType}
-                  onChange={(e) => setFilterType(e.target.value)}
-                >
-                  <FormControlLabel value="include" control={<Radio />} label="Include ingredients" />
-                  <Typography variant="body1" sx={{ color: 'black' }}>
-                    note: (select all menu that contain at least one of the selected ingredients)
-                  </Typography>
-
-                  <FormControlLabel value="exclude" control={<Radio />} label="Exclude ingredients" />
-                  <Typography variant="body1" sx={{ color: 'black' }}>
-                    note: (select all menu that do not contain any of the selected ingredients)
-                  </Typography>
-                </RadioGroup>
-              </FormControl>
-              <FormControl sx={{ width: '100%', mt: 2 }}>
-                <InputLabel label="select-ingredients">Select Ingredients</InputLabel>
-                <Select
-                  label="select-ingredients"
-                  multiple
-                  value={selectedIngredients}
-                  onChange={(e) => setSelectedIngredients(e.target.value)}
-                  renderValue={(selected) => selected.join(', ')}
-                >
-                  {ingredients.map((ingredient) => {
-                    return (
-                      <MenuItem key={ingredient.ingredient} value={ingredient.ingredient}>
-                        <Checkbox checked={selectedIngredients.indexOf(ingredient.ingredient) > -1} />
-                        <ListItemText
-                          primary={
-                            <>
-                              {ingredient?.emoji} {ingredient.ingredient}
-                            </>
-                          }
-                        />
-                      </MenuItem>
-                    );
-                  })}
-                </Select>
-              </FormControl>
-            </DialogContent>
-            <DialogActions>
-              <Button onClick={() => {
-                setSelectedIngredients([]);
-                setOpen(false);
-              }}>
-                Reset
-              </Button>
-              <Button onClick={handleCloseFilterDialog} variant="contained" sx={{ backgroundColor: 'text.secondary', color: 'white' }}>
-                Apply Filter
-              </Button>
-            </DialogActions>
-          </Dialog>
+            setOpen={setOpen}
+            filterType={filterType}
+            setFilterType={setFilterType}
+            selectedIngredients={selectedIngredients}
+            setSelectedIngredients={setSelectedIngredients}
+            handleCloseFilterDialog={handleCloseFilterDialog}
+            ingredients={ingredients}
+          />
         </Box>
         {selectedIngredients.length > 0 && (
           <Typography variant="body1" sx={{ marginY: 2, color: '#666' }}>
