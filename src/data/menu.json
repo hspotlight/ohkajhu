@@ -48,14 +48,6 @@
     "recommended": false
   },
   {
-    "id": 7,
-    "name": "GOCO SMOOTHIES",
-    "imageUrl": "goco_smoothies.jpg",
-    "price": 155,
-    "ingredients": ["coconut", "mango"],
-    "recommended": true
-  },
-  {
     "id": 8,
     "name": "PINEAPPLE BASIL BEET",
     "imageUrl": "pineapple_basil_beet.jpg",
@@ -126,14 +118,6 @@
     "price": 165,
     "ingredients": ["matcha", "avocado"],
     "recommended": true
-  },
-  {
-    "id": 17,
-    "name": "CEREAL SMOOTHIE",
-    "imageUrl": "cereal_smoothie.jpg",
-    "price": 95,
-    "ingredients": ["banana", "cereal"],
-    "recommended": false
   },
   {
     "id": 18,
