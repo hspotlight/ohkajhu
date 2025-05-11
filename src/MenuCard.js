@@ -69,6 +69,7 @@ const MenuCard = ({ item }) => {
             </span>
           )}
         </Typography>
+        <img width="100" src={`/images/${item.imageUrl}`} alt={item.name} />
         <Typography variant="h6" gutterBottom>
           Price: {item.price} baht
         </Typography>

@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "SUMMER SENSATION",
+    "imageUrl": "summer_sensation.jpg",
     "price": 95,
     "ingredients": ["pineapple", "strawberry"],
     "recommended": false
@@ -9,6 +10,7 @@
   {
     "id": 2,
     "name": "GREEN APPLE KIWI",
+    "imageUrl": "green_apple_kiwi.jpg",
     "price": 115,
     "ingredients": ["green apple", "kiwi"],
     "recommended": true
@@ -16,6 +18,7 @@
   {
     "id": 3,
     "name": "MIXED BERRY YOGURT",
+    "imageUrl": "mixed_berry_yogurt.jpg",
     "price": 125,
     "ingredients": ["strawberry", "blueberry", "yogurt"],
     "recommended": false
@@ -23,6 +26,7 @@
   {
     "id": 4,
     "name": "STRAWBERRY HAWAII",
+    "imageUrl": "strawberry_hawaii.jpg",
     "price": 155,
     "ingredients": ["strawberry", "pineapple"],
     "recommended": false
@@ -30,6 +34,7 @@
   {
     "id": 5,
     "name": "STRAWBERRY BEET SHERBET",
+    "imageUrl": "strawberry_beet_sherbet.jpg",
     "price": 145,
     "ingredients": ["strawberry", "beetroot"],
     "recommended": false
@@ -37,6 +42,7 @@
   {
     "id": 6,
     "name": "BLUEBERRY AVOCADO",
+    "imageUrl": "blueberry_avocado.jpg",
     "price": 145,
     "ingredients": ["blueberry", "avocado"],
     "recommended": false
@@ -44,6 +50,7 @@
   {
     "id": 7,
     "name": "GOCO SMOOTHIES",
+    "imageUrl": "goco_smoothies.jpg",
     "price": 155,
     "ingredients": ["coconut", "mango"],
     "recommended": true
@@ -51,6 +58,7 @@
   {
     "id": 8,
     "name": "PINEAPPLE BASIL BEET",
+    "imageUrl": "pineapple_basil_beet.jpg",
     "price": 125,
     "ingredients": ["pineapple", "basil", "beetroot"],
     "recommended": false
@@ -58,6 +66,7 @@
   {
     "id": 9,
     "name": "MANGO PASSION",
+    "imageUrl": "mango_passion.jpg",
     "price": 135,
     "ingredients": ["mango", "passion fruit"],
     "recommended": false
@@ -65,6 +74,7 @@
   {
     "id": 10,
     "name": "HONEY LEMON YOGURT",
+    "imageUrl": "honey_lemon_yogurt.jpg",
     "price": 115,
     "ingredients": ["honey", "lemon", "yogurt"],
     "recommended": false
@@ -72,6 +82,7 @@
   {
     "id": 11,
     "name": "AVOCADO STRAWBERRY",
+    "imageUrl": "avocado_strawberry.jpg",
     "price": 145,
     "ingredients": ["avocado", "strawberry"],
     "recommended": false
@@ -79,6 +90,7 @@
   {
     "id": 12,
     "name": "P&P PEACH PINE",
+    "imageUrl": "peach_pine.jpg",
     "price": 135,
     "ingredients": ["peach", "pineapple"],
     "recommended": false
@@ -86,6 +98,7 @@
   {
     "id": 13,
     "name": "CINNAMON BUN",
+    "imageUrl": "cinnamon_bun.jpg",
     "price": 125,
     "ingredients": ["cinnamon", "banana"],
     "recommended": false
@@ -93,6 +106,7 @@
   {
     "id": 14,
     "name": "PASSION HONEY",
+    "imageUrl": "passion_honey.jpg",
     "price": 105,
     "ingredients": ["passion fruit", "honey"],
     "recommended": true
@@ -100,13 +114,15 @@
   {
     "id": 15,
     "name": "AVOCADO MANGO SMOOTHIES",
+    "imageUrl": "avocado_mango.jpg",
     "price": 135,
     "ingredients": ["avocado", "mango"],
     "recommended": false
   },
   {
     "id": 16,
-    "name": "MATCHA AVOCADO",
+    "name": "UJI MATCHA AVOCADO",
+    "imageUrl": "uji_matcha_avocado.jpg",
     "price": 165,
     "ingredients": ["matcha", "avocado"],
     "recommended": true
@@ -114,6 +130,7 @@
   {
     "id": 17,
     "name": "CEREAL SMOOTHIE",
+    "imageUrl": "cereal_smoothie.jpg",
     "price": 95,
     "ingredients": ["banana", "cereal"],
     "recommended": false
@@ -121,6 +138,7 @@
   {
     "id": 18,
     "name": "APPLE DRAGON",
+    "imageUrl": "apple_dragon.jpg",
     "price": 125,
     "ingredients": ["apple", "dragon fruit"],
     "recommended": false
@@ -128,6 +146,7 @@
   {
     "id": 19,
     "name": "PINEAPPLE MINT",
+    "imageUrl": "pineapple_mint.jpg",
     "price": 115,
     "ingredients": ["pineapple", "mint"],
     "recommended": false
@@ -135,6 +154,7 @@
   {
     "id": 20,
     "name": "COCONUT MATCHA",
+    "imageUrl": "coconut_matcha.jpg",
     "price": 165,
     "ingredients": ["coconut", "matcha"],
     "recommended": false
